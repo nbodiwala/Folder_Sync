@@ -1,6 +1,11 @@
+import csv
 from subprocess import call
+from config import csv_path
 
-source = '//femoran.com/fem/company/1-Open Projects/109967000 - 218 E Grand/Engineering and BIM/07_FEM Shop/01_Current PDF'
-destination = 'C:/Users/nbodiwala/Dropbox (Moran Group)/109967000 - 218 E Grand-Current PDFs'
+with open(csv_path, mode='r') as csv_file:
+    csv_reader = csv.DictReader(csv_file)
+    for line in csv_reader:
+        source = line['Source']
+        destination = line['Destination']
 
-call(['robocopy', source, destination, '*.pdf', '/MIR', '/S', '/XD', '*_archive'])
+        call(['robocopy', source, destination, '*.pdf', '/MIR', '/S', '/XD', '/XO', '*_archive'])
