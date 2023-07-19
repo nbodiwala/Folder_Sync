@@ -8,4 +8,4 @@ with open(csv_path, mode='r') as csv_file:
         source = line['Source']
         destination = line['Destination']
 
-        call(['robocopy', source, destination, '*.pdf', '/MIR', '/S', '/XD', '/XO', '*_archive'])
+        call(['robocopy', source, destination, '/MIR', '/S', '/XD', '/XO', '*_archive'])
