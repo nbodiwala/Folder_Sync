@@ -1,0 +1,2 @@
+csv_path = '//femoran.com/fem/company/Engineering/00_Admin/00_Management/Scripts/Folder Sync/Sync_List.csv'
+recipient_list_path = '//femoran.com/fem/company/Engineering/00_Admin/00_Management/Scripts/Folder Sync/RecipientList.txt'
