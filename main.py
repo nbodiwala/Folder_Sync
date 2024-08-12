@@ -32,7 +32,6 @@ with open(csv_path, mode='r') as csv_file:
 outlook = win32com.client.Dispatch('outlook.application')
 mail = outlook.CreateItem(0)
 mail.To = generate_recipient_list()
-mail.To = 'nirav.bodiwala@femoran.com'
 mail.Subject = 'Folder Sync Process Has Successfully Run'
 if not is_program_running('Dropbox.exe'):
      mail.Body = 'Warning: Dropbox.exe is not running. Verify files are being synced with the cloud'
